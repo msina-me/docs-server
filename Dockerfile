@@ -4,7 +4,7 @@ FROM nginx:latest
 COPY configs/nginx.conf /etc/nginx/nginx.conf
 
 # Copy the password file
-COPY passwd /etc/nginx/pass/passwd
+COPY passwd /etc/nginx/passwd
 
 # Make www directory in home
 RUN mkdir /home/www
