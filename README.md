@@ -7,7 +7,13 @@ A Server and Utils to serve static sites
 git clone https://github.com/msina-me/docs-server.git
 cd docs-server
 image build . -t docs-server:0.1.0 --no-cache
-docker run --name docs-web --rm  -p 8800:80 -itd docs-server:0.1.0
+docker run --name docs-web --rm  -p 8800:80 -v <host-directory>/:/home/www/ -itd docs-server:0.1.0
+```
+
+to stop the server you can use the following command:
+
+```bash
+docker stop docs-web
 ```
 
 These commands will run docs-server on port `http://0.0.0.0:8800`
