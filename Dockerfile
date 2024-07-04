@@ -12,6 +12,6 @@ RUN chown -R nginx:nginx /home/www
 RUN chmod 755 /home/www
 
 # Copy the template files
-COPY templates /home/www/.templates
+COPY templates /home/.templates
 
 CMD ["nginx", "-g", "daemon off;"]
